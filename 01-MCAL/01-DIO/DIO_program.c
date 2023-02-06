@@ -1,5 +1,5 @@
 /*
- *<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<     DIO_program.c    >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ *<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<   DIO_program.c   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
  *
  *  Author : Abdelrahman Adwe Ali 
  *  Layer  : MCAL
@@ -15,8 +15,8 @@
 #include "DIO_config.h"
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------
- *         	                this function set the direction of the Pin (INPUT or OUTPUt)
- *                           *--------------------------------------------------------------*
+ *         	                                    this function set the direction of the Pin (INPUT or OUTPUt)
+ *                                            *--------------------------------------------------------------*
  * Parameters :
          -> Copy_u8Port      : Port name     [DIO_PORTA , DIO_PORTB , DIO_PORTC , DIO_PORTD]
          -> Copy_u8Pin       : Pin number    [DIO_PIN0 , DIO_PIN1 , DIO_PIN2 , DIO_PIN3 , DIO_PIN4 , DIO_PIN5 , DIO_PIN6,DIO_PIN7]
@@ -67,8 +67,8 @@ DIO_Status DIO_enumSetPinDirection (u8 Copy_u8Port , u8 Copy_u8Pin , u8 Copy_u8D
 }
 
 /*--------------------------------------------------------------------------------------------------------------------------------------------------------
- *         	                    this function set the value of the Pin (HIGH or LOW)
- *                              *------------------------------------------------------*
+ *         	                                       this function set the value of the Pin (HIGH or LOW)
+ *                                               *------------------------------------------------------*
  * Parameters :
           -> Copy_u8Port  : Port name   [DIO_PORTA , DIO_PORTB , DIO_PORTC , DIO_PORTD]
           -> Copy_u8Pin   : Pin number  [DIO_PIN0 , DIO_PIN1 , DIO_PIN2 , DIO_PIN3 , DIO_PIN4 , DIO_PIN5 , DIO_PIN6,DIO_PIN7]
@@ -119,8 +119,8 @@ DIO_Status DIO_enumSetPinValue (u8 Copy_u8Port , u8 Copy_u8Pin , u8 Copy_u8Value
 }
 
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------
- *         	                               this function get the value of the Pin (HIGH or LOW)
- *                                      *-------------------------------------------------------*
+ *         	                                            this function get the value of the Pin (HIGH or LOW)
+ *                                                   *-------------------------------------------------------*
  * Parameters :
          -> Copy_u8Port  : Port name        [DIO_PORTA , DIO_PORTB , DIO_PORTC , DIO_PORTD]
          -> Copy_u8Pin   : Pin number       [DIO_PIN0 , DIO_PIN1 , DIO_PIN2 , DIO_PIN3 , DIO_PIN4 , DIO_PIN5 , DIO_PIN6,DIO_PIN7]
@@ -155,8 +155,8 @@ DIO_Status DIO_enumGetPinValue (u8 Copy_u8Port , u8 Copy_u8Pin , u8 * Copy_PtrVa
 }
 
 /*----------------------------------------------------------------------------------------------------------------------------------------------------------
- *         	                     This function toggle the value of the Pin
- *                               *---------------------------------------------*
+ *         	                                      This function toggle the value of the Pin
+ *                                             *---------------------------------------------*
  * Parameters :
          -> Copy_u8Port  : Port name   [DIO_PORTA , DIO_PORTB , DIO_PORTC , DIO_PORTD]
          -> Copy_u8Pin   : Pin number  [DIO_PIN0 , DIO_PIN1 , DIO_PIN2 , DIO_PIN3 , DIO_PIN4 , DIO_PIN5 , DIO_PIN6,DIO_PIN7]  
@@ -190,8 +190,8 @@ DIO_Status DIO_enumTogglePinValue (u8 Copy_u8Port , u8 Copy_u8Pin)
 }
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------
- *         	                  this function set the direction of the Port (INPUT or OUTPUt)
- *                             *---------------------------------------------------------------*
+ *         	                               this function set the direction of the Port (INPUT or OUTPUt)
+ *                                       *---------------------------------------------------------------*
  * Parameters :
          -> Copy_u8Port      : Port name     [DIO_PORTA , DIO_PORTB , DIO_PORTC , DIO_PORTD]
          -> Copy_u8Directoin : Pin Direction [DIO_PORT_OUTPUT , DIO_PORT_INPUT]
@@ -224,8 +224,8 @@ DIO_Status DIO_enumSetPortDirection (u8 Copy_u8Port , u8 Copy_u8Directoin)
 }
 
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------
- *         	                    this function set the value of the Port (HIGH or LOW)
- *                              *------------------------------------------------------*
+ *         	                                   this function set the value of the Port (HIGH or LOW)
+ *                                            *------------------------------------------------------*
  * Parameters :
           -> Copy_u8Port  : Port name   [DIO_PORTA , DIO_PORTB , DIO_PORTC , DIO_PORTD]
           -> Copy_u8Value : Port Value  [DIO_PORT_HIGH , DIO_PORT_LOW]
@@ -258,8 +258,8 @@ DIO_Status DIO_enumSetPortValue (u8 Copy_u8Port , u8 Copy_u8Value)
 }
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------------
- *         	                     this function get the value of the Port
- *                               *-------------------------------------------*
+ *         	                                      this function get the value of the Port
+ *                                             *-------------------------------------------*
  * Parameters :
          -> Copy_u8Port  : Port name    [DIO_PORTA , DIO_PORTB , DIO_PORTC , DIO_PORTD]
          -> Copy_PtrVar  : Pointer to Port Value.   
@@ -292,8 +292,8 @@ DIO_Status DIO_enumGetPortValue (u8 Copy_u8Port , u8 * Copy_PtrVar)
 }
 
 /*---------------------------------------------------------------------------------------------------------------------------------------------------------
- *         	                     This function toggle the value of the Port
- *                               *---------------------------------------------*
+ *         	                                       This function toggle the value of the Port
+ *                                               *---------------------------------------------*
  * Parameters :
          -> Copy_u8Port  : Port name  [DIO_PORTA , DIO_PORTB , DIO_PORTC , DIO_PORTD]  
 
