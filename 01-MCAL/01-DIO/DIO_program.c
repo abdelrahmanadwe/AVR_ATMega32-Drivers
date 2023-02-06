@@ -37,10 +37,10 @@ DIO_Status DIO_enumSetPinDirection (u8 Copy_u8Port , u8 Copy_u8Pin , u8 Copy_u8D
 		{
 			switch(Copy_u8Port)
 			{
-			case DIO_PORTA : SET_BIT(DDRA,Copy_u8Pin); break;
-			case DIO_PORTB : SET_BIT(DDRB,Copy_u8Pin); break;
-			case DIO_PORTC : SET_BIT(DDRC,Copy_u8Pin); break;
-			case DIO_PORTD : SET_BIT(DDRD,Copy_u8Pin); break;
+				case DIO_PORTA : SET_BIT(DDRA,Copy_u8Pin); break;
+				case DIO_PORTB : SET_BIT(DDRB,Copy_u8Pin); break;
+				case DIO_PORTC : SET_BIT(DDRC,Copy_u8Pin); break;
+				case DIO_PORTD : SET_BIT(DDRD,Copy_u8Pin); break;
 			}   
 		}
 		else if(Copy_u8Directoin == DIO_PIN_INPUT)
