@@ -178,7 +178,7 @@ void LED_voidFlashPort  (u8 Copy_u8Port , u8 delay)
  *                                                              *---------------------------------------------------*
  * Parameters :  
 		-> Port                [LED_PORTA , LED_PORTB , LED_PORTC , LED_PORTD]
-            -> Copy_u8ActiveState  [ACTIVE_HIGH , ACTIVE_LOW]
+                -> Copy_u8ActiveState  [ACTIVE_HIGH , ACTIVE_LOW]
 		-> delay               milliseconds
 			
  * return : void     
@@ -206,7 +206,7 @@ void LED_voidShiftLeft (u8 Copy_u8Port , u8 Copy_u8ActiveState , u8 delay )
  *                                                               *---------------------------------------------------*
  * Parameters :  
 		-> Port                [LED_PORTA , LED_PORTB , LED_PORTC , LED_PORTD]
-            -> Copy_u8ActiveState  [ACTIVE_HIGH , ACTIVE_LOW]
+                -> Copy_u8ActiveState  [ACTIVE_HIGH , ACTIVE_LOW]
 		-> delay               milliseconds
 			
  * return : void     
@@ -235,7 +235,7 @@ void LED_voidShiftRight (u8 Copy_u8Port , u8 Copy_u8ActiveState , u8 delay )
  *                                                             *----------------------------------------------------------*
  * Parameters :  
 		-> Port                [LED_PORTA , LED_PORTB , LED_PORTC , LED_PORTD]
-            -> Copy_u8ActiveState  [ACTIVE_HIGH , ACTIVE_LOW]
+                -> Copy_u8ActiveState  [ACTIVE_HIGH , ACTIVE_LOW]
 		-> delay               milliseconds
 			
  * return : void     
@@ -256,7 +256,7 @@ void LED_voidPingPong   (u8 Copy_u8Port , u8 Copy_u8ActiveState , u8 delay )
  *                                                                 *-----------------------------------------------------------*
  * Parameters :  
 		-> Port                [LED_PORTA , LED_PORTB , LED_PORTC , LED_PORTD]
-            -> Copy_u8ActiveState  [ACTIVE_HIGH , ACTIVE_LOW]
+                -> Copy_u8ActiveState  [ACTIVE_HIGH , ACTIVE_LOW]
 		-> delay               milliseconds
 			
  * return : void     
@@ -288,7 +288,7 @@ void LED_voidConverge (u8 Copy_u8Port , u8 Copy_u8ActiveState , u8 delay )
  *                                                                 *----------------------------------------------------------*
  * Parameters :  
 		-> Port                [LED_PORTA , LED_PORTB , LED_PORTC , LED_PORTD]
-            -> Copy_u8ActiveState  [ACTIVE_HIGH , ACTIVE_LOW]
+                -> Copy_u8ActiveState  [ACTIVE_HIGH , ACTIVE_LOW]
 		-> delay               milliseconds
 			
  * return : void     
@@ -321,7 +321,7 @@ void LED_voidDiverge (u8 Copy_u8Port , u8 Copy_u8ActiveState , u8 delay )
  *                                                            *------------------------------------------------------------------------*
  * Parameters :  
 		-> Port                [LED_PORTA , LED_PORTB , LED_PORTC , LED_PORTD]
-            -> Copy_u8ActiveState  [ACTIVE_HIGH , ACTIVE_LOW]
+                -> Copy_u8ActiveState  [ACTIVE_HIGH , ACTIVE_LOW]
 		-> delay               milliseconds
 			
  * return : void     
@@ -342,7 +342,7 @@ void LED_voidConverge_Diverge    ( u8 Copy_u8Port , u8 Copy_u8ActiveState , u8 d
  *                                                               *------------------------------------------------------*
  * Parameters :  
 		-> Port                [LED_PORTA , LED_PORTB , LED_PORTC , LED_PORTD]
-            -> Copy_u8ActiveState  [ACTIVE_HIGH , ACTIVE_LOW]
+                -> Copy_u8ActiveState  [ACTIVE_HIGH , ACTIVE_LOW]
 		-> delay               milliseconds
 			
  * return : void     
