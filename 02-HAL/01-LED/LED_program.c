@@ -16,8 +16,8 @@
 
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------
- *         	                   This function initialize the Pin which connected to led as output pin
- *                           *-----------------------------------------------------------------------*
+ *         	                          This function initialize the Pin which connected to led as output pin
+ *                                     *-----------------------------------------------------------------------*
  * Parameters :
          => struct LED_Data 
 			- Port         [LED_PORTA , LED_PORTB , LED_PORTC , LED_PORTD]
@@ -36,8 +36,8 @@ void LED_voidInit       (LED_Data LED_Configuration)
 
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------
- *         	                   This function set high on led pin (turn on the led )
- *                           *------------------------------------------------------*
+ *         	                             This function set high on led pin (turn on the led )
+ *                                        *------------------------------------------------------*
  * Parameters :
          => struct LED_Data 
 			- Port         [LED_PORTA , LED_PORTB , LED_PORTC , LED_PORTD]
@@ -65,8 +65,8 @@ void LED_voidOn (LED_Data LED_Configuration)
 }
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------
- *         	                   This function set low on led pin (turn off the led) 
- *                           *-----------------------------------------------------*
+ *         	                            This function set low on led pin (turn off the led) 
+ *                                       *-----------------------------------------------------*
  * Parameters :
          => struct LED_Data 
 			- Port         [LED_PORTA , LED_PORTB , LED_PORTC , LED_PORTD]
@@ -95,7 +95,7 @@ void LED_voidOff (LED_Data LED_Configuration)
 }
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------
- *         	                                        This function toggle led pin
+ *         	                                     This function toggle led pin
  *                                                *------------------------------*
  * Parameters :
          => struct LED_Data 
