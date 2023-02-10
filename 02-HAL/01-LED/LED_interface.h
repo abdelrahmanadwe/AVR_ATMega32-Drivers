@@ -27,18 +27,29 @@
 #define LED_PIN6 6
 #define LED_PIN7 7
  
- typedef struct
- {
-	 u8 Port         ;                /* [LED_PORTA , LED_PORTB , LED_PORTC , LED_PORTD]                                         */
-	 u8 Pin          ;                /* [LED_PIN0 , LED_PIN1 , LED_PIN2 , LED_PIN3 , LED_PIN4 , LED_PIN5 , LED_PIN6 , LED_PIN7] */
-	 u8 Active_State ;                /* [ACTIVE_HIGH , ACTIVE_LOW]                                                              */
-	 
- }LED_Data;
  
-void LED_voidInit       (LED_Data LED_Configuration);
-void LED_voidOn         (LED_Data LED_Configuration);
-void LED_voidOff        (LED_Data LED_Configuration);
-void LED_voidToggle     (LED_Data LED_Configuration);
  
+void LED_voidInit      (u8 Copy_u8Port , u8 Copy_u8Pin                       );
+void LED_voidOn        (u8 Copy_u8Port , u8 Copy_u8Pin ,u8 Copy_u8ActiveState);
+void LED_voidOff       (u8 Copy_u8Port , u8 Copy_u8Pin ,u8 Copy_u8ActiveState);
+void LED_voidTogglePin (u8 Copy_u8Port , u8 Copy_u8Pin                       );
+ 
+void LED_voidPortInit    (u8 Copy_u8Port );
+void LED_voidTogglePort  (u8 Copy_u8Port );
+
+void LED_voidFlashPin   (u8 Copy_u8Port , u8 Copy_u8Pin , u8 delay );
+void LED_voidFlashPort  (u8 Copy_u8Port , u8 delay                 );
+
+void LED_voidShiftLeft  (u8 Copy_u8Port , u8 Copy_u8ActiveState , u8 delay );
+void LED_voidShiftRight (u8 Copy_u8Port , u8 Copy_u8ActiveState , u8 delay );
+
+void LED_voidPingPong   (u8 Copy_u8Port , u8 Copy_u8ActiveState , u8 delay );
+
+void LED_voidConverge            ( u8 Copy_u8Port , u8 Copy_u8ActiveState , u8 delay );
+void LED_voidDiverge             ( u8 Copy_u8Port , u8 Copy_u8ActiveState , u8 delay );
+void LED_voidConverge_Diverge    ( u8 Copy_u8Port , u8 Copy_u8ActiveState , u8 delay );
+
+void LED_voidSnakeEffect         ( u8 Copy_u8Port , u8 Copy_u8ActiveState , u8 delay );
+
  
 #endif /* LED_INTERFACE_H_ */
