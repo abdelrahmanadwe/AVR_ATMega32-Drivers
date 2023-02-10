@@ -47,12 +47,12 @@
 DIO_Status DIO_enumSetPinDirection (u8 Copy_u8Port , u8 Copy_u8Pin , u8 Copy_u8Directoin);
 DIO_Status DIO_enumSetPinValue     (u8 Copy_u8Port , u8 Copy_u8Pin , u8 Copy_u8Value    );
 DIO_Status DIO_enumGetPinValue     (u8 Copy_u8Port , u8 Copy_u8Pin , u8 * Copy_PtrVar   );
-DIO_Status DIO_enumTogglePinValue     (u8 Copy_u8Port , u8 Copy_u8Pin ,                    );
+DIO_Status DIO_enumTogglePinValue  (u8 Copy_u8Port , u8 Copy_u8Pin                     );
 
 								/* for PORTS */
 DIO_Status DIO_enumSetPortDirection(u8 Copy_u8Port , u8 Copy_u8Directoin );
 DIO_Status DIO_enumSetPortValue    (u8 Copy_u8Port , u8 Copy_u8Value     );
 DIO_Status DIO_enumGetPortValue    (u8 Copy_u8Port , u8 * Copy_PtrVar    );
-DIO_Status DIO_enumTogglePortValue    (u8 Copy_u8Port                       );
+DIO_Status DIO_enumTogglePortValue (u8 Copy_u8Port                       );
 
 #endif /* DIO_INTERFACE_H_ */
