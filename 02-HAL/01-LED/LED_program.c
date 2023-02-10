@@ -17,11 +17,11 @@
 
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------
- *         	                   This function initialize the Pin which connected to led as output pin
- *                           *-----------------------------------------------------------------------*
+ *         	                                     This function initialize the Pin which connected to led as output pin
+ *                                                *-----------------------------------------------------------------------*
  * Parameters :  
-			-> Copy_u8Port         [LED_PORTA , LED_PORTB , LED_PORTC , LED_PORTD]
-			-> Copy_u8Pin          [LED_PIN0 , LED_PIN1 , LED_PIN2 , LED_PIN3 , LED_PIN4 , LED_PIN5 , LED_PIN6 , LED_PIN7]
+		-> Copy_u8Port         [LED_PORTA , LED_PORTB , LED_PORTC , LED_PORTD]
+		-> Copy_u8Pin          [LED_PIN0 , LED_PIN1 , LED_PIN2 , LED_PIN3 , LED_PIN4 , LED_PIN5 , LED_PIN6 , LED_PIN7]
 			
  * return : void     
  */
@@ -35,12 +35,12 @@ void LED_voidInit (u8 Copy_u8Port , u8 Copy_u8Pin)
 
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------
- *         	                   This function set high on led pin (turn on the led )
- *                           *------------------------------------------------------*
+ *         	                                             This function set high on led pin (turn on the led )
+ *                                                        *------------------------------------------------------*
  * Parameters : 
-			-> Copy_u8Port         [LED_PORTA , LED_PORTB , LED_PORTC , LED_PORTD]
-			-> Copy_u8Pin          [LED_PIN0 , LED_PIN1 , LED_PIN2 , LED_PIN3 , LED_PIN4 , LED_PIN5 , LED_PIN6 , LED_PIN7]
-			-> Copy_u8ActiveState  [ACTIVE_HIGH , ACTIVE_LOW]
+		-> Copy_u8Port         [LED_PORTA , LED_PORTB , LED_PORTC , LED_PORTD]
+		-> Copy_u8Pin          [LED_PIN0 , LED_PIN1 , LED_PIN2 , LED_PIN3 , LED_PIN4 , LED_PIN5 , LED_PIN6 , LED_PIN7]
+		-> Copy_u8ActiveState  [ACTIVE_HIGH , ACTIVE_LOW]
 			
  * return : void     
  */
@@ -63,12 +63,12 @@ void LED_voidOn (u8 Copy_u8Port , u8 Copy_u8Pin ,u8 Copy_u8ActiveState)
 }
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------
- *         	                   This function set low on led pin (turn off the led) 
- *                           *-----------------------------------------------------*
+ *         	                                        This function set low on led pin (turn off the led) 
+ *                                                   *-----------------------------------------------------*
  * Parameters :
-			-> Copy_u8Port         [LED_PORTA , LED_PORTB , LED_PORTC , LED_PORTD]
-			-> Copy_u8Pin          [LED_PIN0 , LED_PIN1 , LED_PIN2 , LED_PIN3 , LED_PIN4 , LED_PIN5 , LED_PIN6 , LED_PIN7]
-			-> Copy_u8ActiveState  [ACTIVE_HIGH , ACTIVE_LOW]
+		-> Copy_u8Port         [LED_PORTA , LED_PORTB , LED_PORTC , LED_PORTD]
+		-> Copy_u8Pin          [LED_PIN0 , LED_PIN1 , LED_PIN2 , LED_PIN3 , LED_PIN4 , LED_PIN5 , LED_PIN6 , LED_PIN7]
+		-> Copy_u8ActiveState  [ACTIVE_HIGH , ACTIVE_LOW]
 			
  * return : void     
  */ 
@@ -93,11 +93,11 @@ void LED_voidOff (u8 Copy_u8Port , u8 Copy_u8Pin ,u8 Copy_u8ActiveState)
 
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------
- *         	                                        This function toggle led pin
- *                                                *------------------------------*
+ *         	                                                       This function toggle led pin
+ *                                                                  *------------------------------*
  * Parameters : 
-			-> Copy_u8Port         [LED_PORTA , LED_PORTB , LED_PORTC , LED_PORTD]
-			-> Copy_u8Pin          [LED_PIN0 , LED_PIN1 , LED_PIN2 , LED_PIN3 , LED_PIN4 , LED_PIN5 , LED_PIN6 , LED_PIN7]
+		-> Copy_u8Port         [LED_PORTA , LED_PORTB , LED_PORTC , LED_PORTD]
+		-> Copy_u8Pin          [LED_PIN0 , LED_PIN1 , LED_PIN2 , LED_PIN3 , LED_PIN4 , LED_PIN5 , LED_PIN6 , LED_PIN7]
 			
  * return : void     
  */
@@ -111,10 +111,10 @@ void LED_voidTogglePin (u8 Copy_u8Port , u8 Copy_u8Pin)
 
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------
- *         	                   This function initialize the Port which connected to leds as output port
- *                           *--------------------------------------------------------------------------*
+ *         	                                        This function initialize the Port which connected to leds as output port
+ *                                                   *--------------------------------------------------------------------------*
  * Parameters :  
-			-> Copy_u8Port         [LED_PORTA , LED_PORTB , LED_PORTC , LED_PORTD]
+		-> Copy_u8Port         [LED_PORTA , LED_PORTB , LED_PORTC , LED_PORTD]
 			
  * return : void     
  */
@@ -135,12 +135,12 @@ void LED_voidTogglePort  (u8 Copy_u8Port )
 
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------
- *         	                                         This function flashing the led every x second
- *                                                 *-----------------------------------------------*
+ *         	                                                      This function flashing the led every x second
+ *                                                                 *-----------------------------------------------*
  * Parameters :  
-			-> Copy_u8Port         [LED_PORTA , LED_PORTB , LED_PORTC , LED_PORTD]
-			-> Copy_u8Pin          [LED_PIN0 , LED_PIN1 , LED_PIN2 , LED_PIN3 , LED_PIN4 , LED_PIN5 , LED_PIN6 , LED_PIN7]
-			-> delay        milliseconds
+		-> Copy_u8Port         [LED_PORTA , LED_PORTB , LED_PORTC , LED_PORTD]
+		-> Copy_u8Pin          [LED_PIN0 , LED_PIN1 , LED_PIN2 , LED_PIN3 , LED_PIN4 , LED_PIN5 , LED_PIN6 , LED_PIN7]
+		-> delay        milliseconds
 			
  * return : void     
  */
@@ -155,11 +155,11 @@ void LED_voidFlashPin (u8 Copy_u8Port , u8 Copy_u8Pin , u8 delay)
 
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------
- *         	                                         This function flashing the port every x milliseconds
- *                                                 *------------------------------------------------------*
+ *         	                                                 This function flashing the port every x milliseconds
+ *                                                            *------------------------------------------------------*
  * Parameters :  
-			-> Port         [LED_PORTA , LED_PORTB , LED_PORTC , LED_PORTD]
-			-> delay        milliseconds
+		-> Port         [LED_PORTA , LED_PORTB , LED_PORTC , LED_PORTD]
+		-> delay        milliseconds
 			
  * return : void     
  */
@@ -174,12 +174,12 @@ void LED_voidFlashPort  (u8 Copy_u8Port , u8 delay)
 
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------
- *         	                                         This function shifting left every x milliseconds
- *                                                 *---------------------------------------------------*
+ *         	                                                   This function shifting left every x milliseconds
+ *                                                              *---------------------------------------------------*
  * Parameters :  
-			-> Port                [LED_PORTA , LED_PORTB , LED_PORTC , LED_PORTD]
+		-> Port                [LED_PORTA , LED_PORTB , LED_PORTC , LED_PORTD]
             -> Copy_u8ActiveState  [ACTIVE_HIGH , ACTIVE_LOW]
-			-> delay               milliseconds
+		-> delay               milliseconds
 			
  * return : void     
  */
@@ -202,12 +202,12 @@ void LED_voidShiftLeft (u8 Copy_u8Port , u8 Copy_u8ActiveState , u8 delay )
 
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------
- *         	                                         This function shifting right every x milliseconds
- *                                                 *---------------------------------------------------*
+ *         	                                                    This function shifting right every x milliseconds
+ *                                                               *---------------------------------------------------*
  * Parameters :  
-			-> Port                [LED_PORTA , LED_PORTB , LED_PORTC , LED_PORTD]
+		-> Port                [LED_PORTA , LED_PORTB , LED_PORTC , LED_PORTD]
             -> Copy_u8ActiveState  [ACTIVE_HIGH , ACTIVE_LOW]
-			-> delay               milliseconds
+		-> delay               milliseconds
 			
  * return : void     
  */
@@ -231,12 +231,12 @@ void LED_voidShiftRight (u8 Copy_u8Port , u8 Copy_u8ActiveState , u8 delay )
 
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------
- *         	                                         This function make Ping Pong effect every x milliseconds
- *                                                 *----------------------------------------------------------*
+ *         	                                                  This function make Ping Pong effect every x milliseconds
+ *                                                             *----------------------------------------------------------*
  * Parameters :  
-			-> Port                [LED_PORTA , LED_PORTB , LED_PORTC , LED_PORTD]
+		-> Port                [LED_PORTA , LED_PORTB , LED_PORTC , LED_PORTD]
             -> Copy_u8ActiveState  [ACTIVE_HIGH , ACTIVE_LOW]
-			-> delay               milliseconds
+		-> delay               milliseconds
 			
  * return : void     
  */
@@ -252,12 +252,12 @@ void LED_voidPingPong   (u8 Copy_u8Port , u8 Copy_u8ActiveState , u8 delay )
 
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------
- *         	                                         This function make two leds converge every x milliseconds
- *                                                 *-----------------------------------------------------------*
+ *         	                                                      This function make two leds converge every x milliseconds
+ *                                                                 *-----------------------------------------------------------*
  * Parameters :  
-			-> Port                [LED_PORTA , LED_PORTB , LED_PORTC , LED_PORTD]
+		-> Port                [LED_PORTA , LED_PORTB , LED_PORTC , LED_PORTD]
             -> Copy_u8ActiveState  [ACTIVE_HIGH , ACTIVE_LOW]
-			-> delay               milliseconds
+		-> delay               milliseconds
 			
  * return : void     
  */
@@ -284,12 +284,12 @@ void LED_voidConverge (u8 Copy_u8Port , u8 Copy_u8ActiveState , u8 delay )
 
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------
- *         	                                         This function make two leds diverge every x milliseconds
- *                                                 *----------------------------------------------------------*
+ *         	                                                      This function make two leds diverge every x milliseconds
+ *                                                                 *----------------------------------------------------------*
  * Parameters :  
-			-> Port                [LED_PORTA , LED_PORTB , LED_PORTC , LED_PORTD]
+		-> Port                [LED_PORTA , LED_PORTB , LED_PORTC , LED_PORTD]
             -> Copy_u8ActiveState  [ACTIVE_HIGH , ACTIVE_LOW]
-			-> delay               milliseconds
+		-> delay               milliseconds
 			
  * return : void     
  */
@@ -317,12 +317,12 @@ void LED_voidDiverge (u8 Copy_u8Port , u8 Copy_u8ActiveState , u8 delay )
 
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------
- *         	                                         This function make two leds converging /diverging every x milliseconds
- *                                                 *------------------------------------------------------------------------*
+ *         	                                                 This function make two leds converging /diverging every x milliseconds
+ *                                                            *------------------------------------------------------------------------*
  * Parameters :  
-			-> Port                [LED_PORTA , LED_PORTB , LED_PORTC , LED_PORTD]
+		-> Port                [LED_PORTA , LED_PORTB , LED_PORTC , LED_PORTD]
             -> Copy_u8ActiveState  [ACTIVE_HIGH , ACTIVE_LOW]
-			-> delay               milliseconds
+		-> delay               milliseconds
 			
  * return : void     
  */
@@ -338,12 +338,12 @@ void LED_voidConverge_Diverge    ( u8 Copy_u8Port , u8 Copy_u8ActiveState , u8 d
 
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------
- *         	                                         This function make Snake effect every x milliseconds
- *                                                 *------------------------------------------------------*
+ *         	                                                    This function make Snake effect every x milliseconds
+ *                                                               *------------------------------------------------------*
  * Parameters :  
-			-> Port                [LED_PORTA , LED_PORTB , LED_PORTC , LED_PORTD]
+		-> Port                [LED_PORTA , LED_PORTB , LED_PORTC , LED_PORTD]
             -> Copy_u8ActiveState  [ACTIVE_HIGH , ACTIVE_LOW]
-			-> delay               milliseconds
+		-> delay               milliseconds
 			
  * return : void     
  */
