@@ -121,7 +121,7 @@ void LED_voidTogglePin (u8 Copy_u8Port , u8 Copy_u8Pin)
 void LED_voidPortInit (u8 Copy_u8Port )
 {
 	
-	DIO_Status DIO_enumSetPortDirection(Copy_u8Port ,  DIO_PORT_OUTPUT);
+	DIO_enumSetPortDirection(Copy_u8Port ,  DIO_PORT_OUTPUT);
 	
 }
 
@@ -129,7 +129,7 @@ void LED_voidPortInit (u8 Copy_u8Port )
 void LED_voidTogglePort  (u8 Copy_u8Port )
 {
 	
-	DIO_Status DIO_enumTogglePortValue(Copy_u8Port );
+	DIO_enumTogglePortValue(Copy_u8Port );
 	
 }
 
@@ -145,7 +145,7 @@ void LED_voidTogglePort  (u8 Copy_u8Port )
  * return : void     
  */
  
-void LED_voidFlashPin (u8 Copy_u8Port , u8 Copy_u8Pin , u8 delay)
+void LED_voidFlashPin (u8 Copy_u8Port , u8 Copy_u8Pin , f32 delay)
 {
 	
 	DIO_enumTogglePinValue( Copy_u8Port , Copy_u8Pin);
@@ -155,36 +155,36 @@ void LED_voidFlashPin (u8 Copy_u8Port , u8 Copy_u8Pin , u8 delay)
 
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------
- *         	                                                 This function flashing the port every x milliseconds
- *                                                            *------------------------------------------------------*
+ *         	                                                 This function flashing the port every x seconds
+ *                                                            *-------------------------------------------------*
  * Parameters :  
 		-> Port         [LED_PORTA , LED_PORTB , LED_PORTC , LED_PORTD]
-		-> delay        milliseconds
+		-> delay        seconds
 			
  * return : void     
  */
  
-void LED_voidFlashPort  (u8 Copy_u8Port , u8 delay)
+void LED_voidFlashPort  (u8 Copy_u8Port , f32 delay)
 {
 	
-	DIO_Status DIO_enumTogglePortValue(Copy_u8Port );
-	_delay_ms(delay);
+	DIO_enumTogglePortValue(Copy_u8Port );
+	_delay_ms(delay * 1000);
 	
 }
 
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------
- *         	                                                   This function shifting left every x milliseconds
- *                                                              *---------------------------------------------------*
+ *         	                                                   This function shifting left every x seconds
+ *                                                              *---------------------------------------------*
  * Parameters :  
 		-> Port                [LED_PORTA , LED_PORTB , LED_PORTC , LED_PORTD]
                 -> Copy_u8ActiveState  [ACTIVE_HIGH , ACTIVE_LOW]
-		-> delay               milliseconds
+		-> delay               seconds
 			
  * return : void     
  */
  
-void LED_voidShiftLeft (u8 Copy_u8Port , u8 Copy_u8ActiveState , u8 delay )
+void LED_voidShiftLeft (u8 Copy_u8Port , u8 Copy_u8ActiveState , f32 delay )
 {
 	u8 LOC_u8PinNum;
 	
@@ -193,7 +193,7 @@ void LED_voidShiftLeft (u8 Copy_u8Port , u8 Copy_u8ActiveState , u8 delay )
 		
 		LED_voidOff(Copy_u8Port , LOC_u8PinNum-1 , Copy_u8ActiveState);
 		LED_voidOn (Copy_u8Port , LOC_u8PinNum , Copy_u8ActiveState  );
-		_delay_ms(delay);
+		_delay_ms(delay * 1000);
 		
 	}
 	LED_voidOff(Copy_u8Port , LOC_u8PinNum-1 , Copy_u8ActiveState);
@@ -202,17 +202,17 @@ void LED_voidShiftLeft (u8 Copy_u8Port , u8 Copy_u8ActiveState , u8 delay )
 
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------
- *         	                                                    This function shifting right every x milliseconds
- *                                                               *---------------------------------------------------*
+ *         	                                                    This function shifting right every x seconds
+ *                                                               *----------------------------------------------*
  * Parameters :  
 		-> Port                [LED_PORTA , LED_PORTB , LED_PORTC , LED_PORTD]
                 -> Copy_u8ActiveState  [ACTIVE_HIGH , ACTIVE_LOW]
-		-> delay               milliseconds
+		-> delay               seconds
 			
  * return : void     
  */
  
-void LED_voidShiftRight (u8 Copy_u8Port , u8 Copy_u8ActiveState , u8 delay )
+void LED_voidShiftRight (u8 Copy_u8Port , u8 Copy_u8ActiveState , f32 delay )
 {
 	u8 LOC_u8PinNum;
 	
@@ -222,7 +222,7 @@ void LED_voidShiftRight (u8 Copy_u8Port , u8 Copy_u8ActiveState , u8 delay )
 		LED_voidOff(Copy_u8Port , LOC_u8PinNum+1 , Copy_u8ActiveState);
 		LED_voidOn (Copy_u8Port , LOC_u8PinNum , Copy_u8ActiveState  );
 		
-		_delay_ms(delay);
+		_delay_ms(delay * 1000);
 		
 	}
 	LED_voidOff(Copy_u8Port , LOC_u8PinNum+1 , Copy_u8ActiveState);
@@ -231,17 +231,17 @@ void LED_voidShiftRight (u8 Copy_u8Port , u8 Copy_u8ActiveState , u8 delay )
 
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------
- *         	                                                  This function make Ping Pong effect every x milliseconds
- *                                                             *----------------------------------------------------------*
+ *         	                                                  This function make Ping Pong effect every x seconds
+ *                                                             *-----------------------------------------------------*
  * Parameters :  
 		-> Port                [LED_PORTA , LED_PORTB , LED_PORTC , LED_PORTD]
                 -> Copy_u8ActiveState  [ACTIVE_HIGH , ACTIVE_LOW]
-		-> delay               milliseconds
+		-> delay               seconds
 			
  * return : void     
  */
  
-void LED_voidPingPong   (u8 Copy_u8Port , u8 Copy_u8ActiveState , u8 delay )
+void LED_voidPingPong   (u8 Copy_u8Port , u8 Copy_u8ActiveState , f32 delay )
 {
 	
 	LED_voidShiftLeft  ( Copy_u8Port ,  Copy_u8ActiveState , delay );
@@ -252,16 +252,16 @@ void LED_voidPingPong   (u8 Copy_u8Port , u8 Copy_u8ActiveState , u8 delay )
 
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------
- *         	                                                      This function make two leds converge every x milliseconds
- *                                                                 *-----------------------------------------------------------*
+ *         	                                                      This function make two leds converge every x seconds
+ *                                                                 *------------------------------------------------------*
  * Parameters :  
 		-> Port                [LED_PORTA , LED_PORTB , LED_PORTC , LED_PORTD]
                 -> Copy_u8ActiveState  [ACTIVE_HIGH , ACTIVE_LOW]
-		-> delay               milliseconds
+		-> delay               seconds
 			
  * return : void     
  */
-void LED_voidConverge (u8 Copy_u8Port , u8 Copy_u8ActiveState , u8 delay )
+void LED_voidConverge (u8 Copy_u8Port , u8 Copy_u8ActiveState , f32 delay )
 {
 	u8 LOC_u8PinNumL;
 	u8 LOC_u8PinNumR;
@@ -275,7 +275,7 @@ void LED_voidConverge (u8 Copy_u8Port , u8 Copy_u8ActiveState , u8 delay )
 		LED_voidOff(Copy_u8Port , LOC_u8PinNumR+1 , Copy_u8ActiveState);
 		LED_voidOn (Copy_u8Port , LOC_u8PinNumR , Copy_u8ActiveState  );
 		
-		_delay_ms(delay);
+		_delay_ms(delay * 1000);
 	}
 	LED_voidOff(Copy_u8Port , LOC_u8PinNumL-1 , Copy_u8ActiveState);
 	LED_voidOff(Copy_u8Port , LOC_u8PinNumR+1 , Copy_u8ActiveState);
@@ -284,17 +284,17 @@ void LED_voidConverge (u8 Copy_u8Port , u8 Copy_u8ActiveState , u8 delay )
 
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------
- *         	                                                      This function make two leds diverge every x milliseconds
- *                                                                 *----------------------------------------------------------*
+ *         	                                                      This function make two leds diverge every x seconds
+ *                                                                 *-----------------------------------------------------*
  * Parameters :  
 		-> Port                [LED_PORTA , LED_PORTB , LED_PORTC , LED_PORTD]
                 -> Copy_u8ActiveState  [ACTIVE_HIGH , ACTIVE_LOW]
-		-> delay               milliseconds
+		-> delay               seconds
 			
  * return : void     
  */
 
-void LED_voidDiverge (u8 Copy_u8Port , u8 Copy_u8ActiveState , u8 delay )
+void LED_voidDiverge (u8 Copy_u8Port , u8 Copy_u8ActiveState , f32 delay )
 {
 	u8 LOC_u8PinNumL;
 	u8 LOC_u8PinNumR;
@@ -308,7 +308,7 @@ void LED_voidDiverge (u8 Copy_u8Port , u8 Copy_u8ActiveState , u8 delay )
 		LED_voidOn (Copy_u8Port , LOC_u8PinNumL , Copy_u8ActiveState  );
 		LED_voidOn (Copy_u8Port , LOC_u8PinNumR , Copy_u8ActiveState  );
 		
-		_delay_ms(delay);
+		_delay_ms(delay * 1000);
 	}
 	LED_voidOff(Copy_u8Port , LOC_u8PinNumL+1 , Copy_u8ActiveState);
 	LED_voidOff(Copy_u8Port , LOC_u8PinNumR-1 , Copy_u8ActiveState);
@@ -317,17 +317,17 @@ void LED_voidDiverge (u8 Copy_u8Port , u8 Copy_u8ActiveState , u8 delay )
 
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------
- *         	                                                 This function make two leds converging /diverging every x milliseconds
- *                                                            *------------------------------------------------------------------------*
+ *         	                                                 This function make two leds converging /diverging every x seconds
+ *                                                            *-------------------------------------------------------------------*
  * Parameters :  
 		-> Port                [LED_PORTA , LED_PORTB , LED_PORTC , LED_PORTD]
                 -> Copy_u8ActiveState  [ACTIVE_HIGH , ACTIVE_LOW]
-		-> delay               milliseconds
+		-> delay               seconds
 			
  * return : void     
  */
  
-void LED_voidConverge_Diverge    ( u8 Copy_u8Port , u8 Copy_u8ActiveState , u8 delay )
+void LED_voidConverge_Diverge    ( u8 Copy_u8Port , u8 Copy_u8ActiveState , f32 delay )
 {
 	
 	LED_voidConverge ( Copy_u8Port , Copy_u8ActiveState , delay );
@@ -338,17 +338,17 @@ void LED_voidConverge_Diverge    ( u8 Copy_u8Port , u8 Copy_u8ActiveState , u8 d
 
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------
- *         	                                                    This function make Snake effect every x milliseconds
- *                                                               *------------------------------------------------------*
+ *         	                                                    This function make Snake effect every x seconds
+ *                                                               *-------------------------------------------------*
  * Parameters :  
 		-> Port                [LED_PORTA , LED_PORTB , LED_PORTC , LED_PORTD]
                 -> Copy_u8ActiveState  [ACTIVE_HIGH , ACTIVE_LOW]
-		-> delay               milliseconds
+		-> delay               seconds
 			
  * return : void     
  */
  
-void LED_voidSnakeEffect ( u8 Copy_u8Port , u8 Copy_u8ActiveState , u8 delay )
+void LED_voidSnakeEffect ( u8 Copy_u8Port , u8 Copy_u8ActiveState , f32 delay )
 {
 	
 	u8 LOC_u8PinNum;
@@ -358,7 +358,7 @@ void LED_voidSnakeEffect ( u8 Copy_u8Port , u8 Copy_u8ActiveState , u8 delay )
 		
 		LED_voidOn ( Copy_u8Port , LOC_u8PinNum , Copy_u8ActiveState);
 		
-		_delay_ms(delay);
+		_delay_ms(delay * 1000);
 		
 	}
 	
@@ -367,7 +367,7 @@ void LED_voidSnakeEffect ( u8 Copy_u8Port , u8 Copy_u8ActiveState , u8 delay )
 		
 		LED_voidOff ( Copy_u8Port , LOC_u8PinNum , Copy_u8ActiveState);
 		
-		_delay_ms(delay);
+		_delay_ms(delay * 1000);
 		
 	}
 	
