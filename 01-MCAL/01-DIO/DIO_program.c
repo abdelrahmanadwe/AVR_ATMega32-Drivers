@@ -243,10 +243,10 @@ DIO_Status DIO_enumSetPortValue (u8 Copy_u8Port , u8 Copy_u8Value)
 	{
 		switch(Copy_u8Port)
 		{
-			case DIO_PORTA : DDRA = Copy_u8Value; break;
-			case DIO_PORTB : DDRB = Copy_u8Value; break;
-			case DIO_PORTC : DDRC = Copy_u8Value; break;
-			case DIO_PORTD : DDRD = Copy_u8Value; break;
+			case DIO_PORTA : PORTA = Copy_u8Value; break;
+			case DIO_PORTB : PORTB = Copy_u8Value; break;
+			case DIO_PORTC : PORTC = Copy_u8Value; break;
+			case DIO_PORTD : PORTD = Copy_u8Value; break;
 		} 
 	}
 	else
@@ -323,4 +323,108 @@ DIO_Status DIO_enumTogglePortValue (u8 Copy_u8Port)
 
 	return LOC_enumStatus;
 
+}
+
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------
+ *         	                                      This function write on low nibbles of the port
+ *                                                 *-------------------------------------------------*
+ * Parameters :
+         -> Copy_u8Port  : Port name  [DIO_PORTA , DIO_PORTB , DIO_PORTC , DIO_PORTD]  
+		 -> Copy_u8Value : which set its low bits on low nibbles of the port
+		 
+ * return DIO_Status :
+ *      -> DIO_OK  --> if the toggle is done.
+ *      -> DIO_NOK --> if the toggle isn't done.
+ */
+DIO_Status DIO_enumWriteLowNibbles (u8 Copy_u8Port , u8 Copy_u8Value     )
+{
+	
+	DIO_Status LOC_enumStatus = DIO_OK;
+	
+	if( (Copy_u8Port <= DIO_PORTD) )
+	{
+		
+		Copy_u8Value &=0x0F;
+		
+		switch(Copy_u8Port)
+		{
+		case DIO_PORTA : 
+			PORTA &= 0xF0; 
+			PORTA |= Copy_u8Value;
+			break;
+		case DIO_PORTB : 
+			PORTB &= 0xF0; 
+			PORTB |= Copy_u8Value;
+			break;
+		case DIO_PORTC : 
+			PORTC &= 0xF0; 
+			PORTC |= Copy_u8Value;
+			break;
+		case DIO_PORTD : 
+			PORTD &= 0xF0; 
+			PORTD |= Copy_u8Value;
+			break;
+		} 
+		
+	}
+	else 
+	{
+		LOC_enumStatus = DIO_NOK;
+	}
+	
+	return LOC_enumStatus;
+	
+}
+
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------
+ *         	                                        This function write on high nibbles of the port
+ *                                                   *-------------------------------------------------*
+ * Parameters :
+         -> Copy_u8Port  : Port name  [DIO_PORTA , DIO_PORTB , DIO_PORTC , DIO_PORTD]  
+		 -> Copy_u8Value : which set its high bits on high nibbles of the port
+		 
+ * return DIO_Status :
+ *      -> DIO_OK  --> if the toggle is done.
+ *      -> DIO_NOK --> if the toggle isn't done.
+ */
+DIO_Status DIO_enumWriteHighNibbles (u8 Copy_u8Port , u8 Copy_u8Value     )
+{
+	
+	DIO_Status LOC_enumStatus = DIO_OK;
+	
+	if( (Copy_u8Port <= DIO_PORTD) )
+	{
+		
+		Copy_u8Value <<=4;
+		
+		switch(Copy_u8Port)
+		{
+		case DIO_PORTA : 
+			PORTA &= 0x0F; 
+			PORTA |= Copy_u8Value;
+			break;
+		case DIO_PORTB : 
+			PORTB &= 0x0F; 
+			PORTB |= Copy_u8Value;
+			break;
+		case DIO_PORTC : 
+			PORTC &= 0x0F; 
+			PORTC |= Copy_u8Value;
+			break;
+		case DIO_PORTD : 
+			PORTD &= 0x0F; 
+			PORTD |= Copy_u8Value;
+			break;
+		} 
+		
+	}
+	else 
+	{
+		LOC_enumStatus = DIO_NOK;
+	}
+	
+	return LOC_enumStatus;
+	
 }

@@ -55,4 +55,8 @@ DIO_Status DIO_enumSetPortValue    (u8 Copy_u8Port , u8 Copy_u8Value     );
 DIO_Status DIO_enumGetPortValue    (u8 Copy_u8Port , u8 * Copy_PtrVar    );
 DIO_Status DIO_enumTogglePortValue (u8 Copy_u8Port                       );
 
+                               /* for nibbles*/
+DIO_Status DIO_enumWriteLowNibbles  (u8 Copy_u8Port , u8 Copy_u8Value     );
+DIO_Status DIO_enumWriteHighNibbles (u8 Copy_u8Port , u8 Copy_u8Value     );
+
 #endif /* DIO_INTERFACE_H_ */
