@@ -428,3 +428,15 @@ DIO_Status DIO_enumWriteHighNibbles (u8 Copy_u8Port , u8 Copy_u8Value     )
 	return LOC_enumStatus;
 	
 }
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------
+ *         	                                     This function disable the internal pull up for the microcontroller
+ *                                                *------------------------------------------------------------------*
+ *   return : void 
+ */
+ 
+void DIO_voidDisableIntPullUp(void)
+{
+	
+	SET_BIT( SFIOR , PUD );
+}

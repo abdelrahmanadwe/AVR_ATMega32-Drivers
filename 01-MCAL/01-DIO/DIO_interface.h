@@ -43,6 +43,7 @@
 #define DIO_PIN6 6
 #define DIO_PIN7 7
 
+#define PUD 2
 								/* for PINS */
 DIO_Status DIO_enumSetPinDirection (u8 Copy_u8Port , u8 Copy_u8Pin , u8 Copy_u8Directoin);
 DIO_Status DIO_enumSetPinValue     (u8 Copy_u8Port , u8 Copy_u8Pin , u8 Copy_u8Value    );
@@ -58,5 +59,7 @@ DIO_Status DIO_enumTogglePortValue (u8 Copy_u8Port                       );
                                /* for nibbles*/
 DIO_Status DIO_enumWriteLowNibbles  (u8 Copy_u8Port , u8 Copy_u8Value     );
 DIO_Status DIO_enumWriteHighNibbles (u8 Copy_u8Port , u8 Copy_u8Value     );
+
+void DIO_voidDisableIntPullUp(void);
 
 #endif /* DIO_INTERFACE_H_ */
