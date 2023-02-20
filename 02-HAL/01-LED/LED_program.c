@@ -214,18 +214,18 @@ void LED_voidShiftLeft (u8 Copy_u8Port , u8 Copy_u8ActiveState , f32 delay )
  
 void LED_voidShiftRight (u8 Copy_u8Port , u8 Copy_u8ActiveState , f32 delay )
 {
-	u8 LOC_u8PinNum;
+	s8 LOC_s8PinNum;
 	
-	for( LOC_u8PinNum = LED_PIN7 ; LOC_u8PinNum >= LED_PIN0 ; --LOC_u8PinNum )
+	for( LOC_s8PinNum = LED_PIN7 ; LOC_s8PinNum >= LED_PIN0 ; --LOC_u8PinNum )
 	{
 		
-		LED_voidOff(Copy_u8Port , LOC_u8PinNum+1 , Copy_u8ActiveState);
-		LED_voidOn (Copy_u8Port , LOC_u8PinNum , Copy_u8ActiveState  );
+		LED_voidOff(Copy_u8Port , LOC_s8PinNum+1 , Copy_u8ActiveState);
+		LED_voidOn (Copy_u8Port , LOC_s8PinNum , Copy_u8ActiveState  );
 		
 		_delay_ms(delay * 1000);
 		
 	}
-	LED_voidOff(Copy_u8Port , LOC_u8PinNum+1 , Copy_u8ActiveState);
+	LED_voidOff(Copy_u8Port , LOC_s8PinNum+1 , Copy_u8ActiveState);
 	
 }
 
