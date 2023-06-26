@@ -79,7 +79,7 @@ void LED_voidOff (u8 Copy_u8Port , u8 Copy_u8Pin ,u8 Copy_u8ActiveState)
 	if(Copy_u8ActiveState == ACTIVE_HIGH)
 	{
 		
-		DIO_enumSetPinValue (Copy_u8Port , Copy_u8Pin , DIO_PIN_LoW );
+		DIO_enumSetPinValue (Copy_u8Port , Copy_u8Pin , DIO_PIN_LOW );
 		
 	}
 	else if(Copy_u8ActiveState == ACTIVE_LOW)
@@ -105,7 +105,7 @@ void LED_voidOff (u8 Copy_u8Port , u8 Copy_u8Pin ,u8 Copy_u8ActiveState)
 void LED_voidTogglePin (u8 Copy_u8Port , u8 Copy_u8Pin)
 {
 	
-	DIO_enumTogglePinValue(Copy_u8Por , Copy_u8Pin);
+	DIO_enumTogglePinValue(Copy_u8Port , Copy_u8Pin);
 	
 }
 
@@ -216,7 +216,7 @@ void LED_voidShiftRight (u8 Copy_u8Port , u8 Copy_u8ActiveState , f32 delay )
 {
 	s8 LOC_s8PinNum;
 	
-	for( LOC_s8PinNum = LED_PIN7 ; LOC_s8PinNum >= LED_PIN0 ; --LOC_u8PinNum )
+	for( LOC_s8PinNum = LED_PIN7 ; LOC_s8PinNum >= LED_PIN0 ; --LOC_s8PinNum )
 	{
 		
 		LED_voidOff(Copy_u8Port , LOC_s8PinNum+1 , Copy_u8ActiveState);
