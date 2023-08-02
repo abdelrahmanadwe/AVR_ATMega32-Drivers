@@ -32,9 +32,9 @@ typedef struct
 {
 	
 	u8 Type       ;     /* SSD_COMMON_CATHODE or SSD_COMMON_ANODE */
-	u8 Port       ;
-	u8 EnablePort ;
-	u8 EnablePin  ;
+	u8 Port       ;     /*[SSD_PORTA , SSD_PORTB , SSD_PORTC , SSD_PORTD]*/
+	u8 EnablePort ;     /*[SSD_PORTA , SSD_PORTB , SSD_PORTC , SSD_PORTD]*/
+	u8 EnablePin  ;     /*[SSD_PIN0 , SSD_PIN1 , SSD_PIN2 , SSD_PIN3 , SSD_PIN4 , SSD_PIN5 , SSD_PIN6 , SSD_PIN7]*/
 	
 	
 }SSD_Data;

@@ -440,3 +440,12 @@ void DIO_voidDisableIntPullUp(void)
 	
 	SET_BIT( SFIOR , PUD );
 }
+
+void DIO_voidConnectIntPullup(u8 Copy_u8Port , u8 Copy_u8Pin ) 
+{
+	
+	CLR_BIT                 ( SFIOR , PUD                            );
+	DIO_enumSetPinDirection (Copy_u8Port , Copy_u8Pin ,DIO_PIN_INPUT );
+	DIO_enumSetPinValue     (Copy_u8Port , Copy_u8Pin , DIO_PIN_HIGH );
+	
+}

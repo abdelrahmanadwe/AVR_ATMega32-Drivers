@@ -17,6 +17,13 @@
 #include "KPD_interface.h"
 #include "KPD_config.h"
 
+/*------------------------------------------------------------------------------------------------------------------------------------------------------
+ *         	                                      This Function used to get the pressed button of the kpd
+ *                                                *------------------------------------------------------------*
+ * Parameters : Nothing
+ * return     : the pressed button  
+ */
+ 
  void KPD_voidInit    ( void )
  {
 	 
@@ -46,6 +53,18 @@
 	
  }
  
+/*------------------------------------------------------------------------------------------------------------------------------------------------------
+ *         	                                     This function initialize the Port which connected to SSD as output Port
+ *                                                *------------------------------------------------------------------------*
+ * Parameters : 
+		=> struct (SSD_Data) :
+			-> Type         [SSD_COMMON_CATHODE , SSD_COMMON_ANODE ]
+			-> Port    			[SSD_PORTA , SSD_PORTB , SSD_PORTC , SSD_PORTD]
+			-> EnablePort     [SSD_PORTA , SSD_PORTB , SSD_PORTC , SSD_PORTD]
+			-> EnablePin          [SSD_PIN0 , SSD_PIN1 , SSD_PIN2 , SSD_PIN3 , SSD_PIN4 , SSD_PIN5 , SSD_PIN6 , SSD_PIN7]
+			
+ * return : void     
+ */
  u8 KPD_u8GetPressed  ( void )
  {
 	 

@@ -13,8 +13,8 @@
 /*
 
  Optoins :-
-	1-4
-	2-8
+	1- 4
+	2- 8
 	
 */
 #define CLCD_MODE 8
@@ -32,7 +32,7 @@
          /* D0:D7 */
 #define CLCD_DATA_PORT    DIO_PORTA
          /* RS,RW,EN */
-#define CLCD_CONTROL_PORT DIO_PORTB
+#define CLCD_CONTROL_PORT DIO_PORTC
 
  
 /*
