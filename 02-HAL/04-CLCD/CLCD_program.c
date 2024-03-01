@@ -235,7 +235,7 @@ void CLCD_voidSendString  (const u8 * Copy_u8PrtStrign )
 void CLCD_voidSendNumber  (u8 Copy_u8Number      )
 {
 	
-	u8 LOC_u8Reverse = 0 ;
+	u8 LOC_u8Reverse = 1 ;
 	
 	if(Copy_u8Number == 0 )
 	{
@@ -249,7 +249,7 @@ void CLCD_voidSendNumber  (u8 Copy_u8Number      )
 			LOC_u8Reverse = (LOC_u8Reverse * 10 ) + (Copy_u8Number % 10);
 			Copy_u8Number /= 10 ;
 		}
-		while (LOC_u8Reverse != 0)
+		while (LOC_u8Reverse != 1)
 		{
 			CLCD_voidSendData( (LOC_u8Reverse % 10 ) + 48 );
 			LOC_u8Reverse /= 10 ;
